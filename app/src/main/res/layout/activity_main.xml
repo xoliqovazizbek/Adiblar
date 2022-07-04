@@ -6,13 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@id/btn_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adib_rasmi"
+        app:layout_constraintBottom_toTopOf="@id/fullname"
+        app:layout_constraintLeft_toLeftOf="@id/img"
+        app:layout_constraintRight_toRightOf="@id/img"
+        app:layout_constraintTop_toBottomOf="@id/img" />
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="10dp"
+        android:hint="Adib ismi, familiyasi va otasining ismi"
+        app:layout_constraintBottom_toTopOf="@id/born_date"
+        app:layout_constraintTop_toBottomOf="@id/btn_img" />
+
+    <EditText
+        android:id="@+id/born_date"
+        android:layout_width="match_parent"
+        android:hint="Tug’ilgan yili"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/fullname" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:hint="Vafot etgan yili"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/about"
+        app:layout_constraintTop_toBottomOf="@id/born_date" />
+
+    <EditText
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:hint="Adib haqida to’liq ma’lumot"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@id/save"
+        app:layout_constraintTop_toBottomOf="@id/date" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about" />
 </androidx.constraintlayout.widget.ConstraintLayout>
